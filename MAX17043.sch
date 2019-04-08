@@ -1,0 +1,190 @@
+EESchema Schematic File Version 4
+LIBS:Senior_Project_Rev_1_5-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 5 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L user_made_IC:MAX1704x U4
+U 1 1 5CABFE20
+P 5450 3850
+F 0 "U4" H 5550 4365 50  0000 C CNN
+F 1 "MAX1704x" H 5550 4274 50  0000 C CNN
+F 2 "" H 5450 3850 50  0001 C CNN
+F 3 "" H 5450 3850 50  0001 C CNN
+	1    5450 3850
+	1    0    0    -1  
+$EndComp
+Text Label 4850 3700 0    50   ~ 0
+V_BAT
+Text Label 4850 3800 0    50   ~ 0
+VDD
+Wire Wire Line
+	5100 3600 5050 3600
+Wire Wire Line
+	5050 3600 5050 3900
+$Comp
+L Device:R_Small R17
+U 1 1 5CABFE98
+P 3300 3550
+F 0 "R17" H 3359 3596 50  0000 L CNN
+F 1 "150" H 3359 3505 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 3300 3550 50  0001 C CNN
+F 3 "~" H 3300 3550 50  0001 C CNN
+	1    3300 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R18
+U 1 1 5CABFF0E
+P 3700 3550
+F 0 "R18" H 3759 3596 50  0000 L CNN
+F 1 "1k" H 3759 3505 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 3700 3550 50  0001 C CNN
+F 3 "~" H 3700 3550 50  0001 C CNN
+	1    3700 3550
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C14
+U 1 1 5CABFF65
+P 3300 3900
+F 0 "C14" H 3392 3946 50  0000 L CNN
+F 1 ".1uF" H 3392 3855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3300 3900 50  0001 C CNN
+F 3 "~" H 3300 3900 50  0001 C CNN
+	1    3300 3900
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C15
+U 1 1 5CABFF9B
+P 3700 3900
+F 0 "C15" H 3792 3946 50  0000 L CNN
+F 1 "1uF" H 3792 3855 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 3700 3900 50  0001 C CNN
+F 3 "~" H 3700 3900 50  0001 C CNN
+	1    3700 3900
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 3650 3300 3750
+Wire Wire Line
+	3700 3650 3700 3750
+Wire Wire Line
+	3300 3750 3550 3750
+Connection ~ 3300 3750
+Wire Wire Line
+	3300 3750 3300 3800
+Wire Wire Line
+	3700 3750 3950 3750
+Connection ~ 3700 3750
+Wire Wire Line
+	3700 3750 3700 3800
+Wire Wire Line
+	3300 3450 3300 3400
+Wire Wire Line
+	3700 3450 3700 3400
+Wire Wire Line
+	3700 3400 3450 3400
+$Comp
+L power:GND #PWR0123
+U 1 1 5CAC01C4
+P 3300 4100
+F 0 "#PWR0123" H 3300 3850 50  0001 C CNN
+F 1 "GND" H 3305 3927 50  0000 C CNN
+F 2 "" H 3300 4100 50  0001 C CNN
+F 3 "" H 3300 4100 50  0001 C CNN
+	1    3300 4100
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0124
+U 1 1 5CAC01F0
+P 3700 4100
+F 0 "#PWR0124" H 3700 3850 50  0001 C CNN
+F 1 "GND" H 3705 3927 50  0000 C CNN
+F 2 "" H 3700 4100 50  0001 C CNN
+F 3 "" H 3700 4100 50  0001 C CNN
+	1    3700 4100
+	1    0    0    -1  
+$EndComp
+Text Label 3550 3750 2    50   ~ 0
+VDD
+Text Label 3950 3750 2    50   ~ 0
+V_BAT
+Wire Wire Line
+	3300 4000 3300 4100
+Wire Wire Line
+	3700 4000 3700 4100
+$Comp
+L power:+3.3V #PWR0125
+U 1 1 5CAC046F
+P 3300 3400
+F 0 "#PWR0125" H 3300 3250 50  0001 C CNN
+F 1 "+3.3V" H 3315 3573 50  0000 C CNN
+F 2 "" H 3300 3400 50  0001 C CNN
+F 3 "" H 3300 3400 50  0001 C CNN
+	1    3300 3400
+	1    0    0    -1  
+$EndComp
+Text Label 3450 3400 0    50   ~ 0
+V_BAT_IN
+Wire Wire Line
+	5100 3700 4850 3700
+Wire Wire Line
+	5100 3800 4850 3800
+$Comp
+L power:GND #PWR0126
+U 1 1 5CAC06CB
+P 5050 4050
+F 0 "#PWR0126" H 5050 3800 50  0001 C CNN
+F 1 "GND" H 5055 3877 50  0000 C CNN
+F 2 "" H 5050 4050 50  0001 C CNN
+F 3 "" H 5050 4050 50  0001 C CNN
+	1    5050 4050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5100 3900 5050 3900
+Connection ~ 5050 3900
+Wire Wire Line
+	5050 3900 5050 4050
+Text Label 6200 3600 2    50   ~ 0
+SDA
+Text Label 6200 3700 2    50   ~ 0
+SCL
+Wire Wire Line
+	6000 3800 6200 3800
+Wire Wire Line
+	6200 3800 6200 3950
+$Comp
+L power:GND #PWR0127
+U 1 1 5CAC09BA
+P 6200 3950
+F 0 "#PWR0127" H 6200 3700 50  0001 C CNN
+F 1 "GND" H 6205 3777 50  0000 C CNN
+F 2 "" H 6200 3950 50  0001 C CNN
+F 3 "" H 6200 3950 50  0001 C CNN
+	1    6200 3950
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6000 3600 6200 3600
+Wire Wire Line
+	6000 3700 6200 3700
+Text GLabel 6200 3600 2    50   Input ~ 0
+SDA
+Text GLabel 6200 3700 2    50   Input ~ 0
+SCL
+$EndSCHEMATC

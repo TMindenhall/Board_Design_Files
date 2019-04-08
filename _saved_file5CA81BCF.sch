@@ -1,0 +1,302 @@
+EESchema Schematic File Version 4
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 3
+Title "Senior Project"
+Date "2019-04-05"
+Rev "1.5"
+Comp "MSU Denver"
+Comment1 "USB to Serial Interface"
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_USB:CP2104 U?
+U 1 1 5CA81C2A
+P 6100 3350
+F 0 "U?" H 6100 2264 50  0000 C CNN
+F 1 "CP2104" H 6100 2173 50  0000 C CNN
+F 2 "Package_DFN_QFN:QFN-24-1EP_4x4mm_P0.5mm_EP2.6x2.6mm" H 6250 2400 50  0001 L CNN
+F 3 "https://www.silabs.com/Support%20Documents/TechnicalDocs/cp2104.pdf" H 5550 4600 50  0001 C CNN
+	1    6100 3350
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5CA81D29
+P 3800 1600
+F 0 "C?" H 3892 1646 50  0000 L CNN
+F 1 ".1uF" H 3892 1555 50  0000 L CNN
+F 2 "" H 3800 1600 50  0001 C CNN
+F 3 "~" H 3800 1600 50  0001 C CNN
+	1    3800 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5CA81E17
+P 4150 1600
+F 0 "C?" H 4242 1646 50  0000 L CNN
+F 1 "10uF" H 4242 1555 50  0000 L CNN
+F 2 "" H 4150 1600 50  0001 C CNN
+F 3 "~" H 4150 1600 50  0001 C CNN
+	1    4150 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C?
+U 1 1 5CA81E53
+P 4750 1600
+F 0 "C?" H 4842 1646 50  0000 L CNN
+F 1 "10uF" H 4842 1555 50  0000 L CNN
+F 2 "" H 4750 1600 50  0001 C CNN
+F 3 "~" H 4750 1600 50  0001 C CNN
+	1    4750 1600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3800 1500 3800 1400
+Wire Wire Line
+	3800 1400 4150 1400
+Wire Wire Line
+	4150 1400 4150 1500
+Wire Wire Line
+	3800 1700 3800 1800
+Wire Wire Line
+	3800 1800 3950 1800
+Wire Wire Line
+	4150 1800 4150 1700
+Text Label 3800 1400 0    50   ~ 0
+V_REG_IN
+$Comp
+L power:GND #PWR?
+U 1 1 5CA81F42
+P 3950 1800
+F 0 "#PWR?" H 3950 1550 50  0001 C CNN
+F 1 "GND" H 3955 1627 50  0000 C CNN
+F 2 "" H 3950 1800 50  0001 C CNN
+F 3 "" H 3950 1800 50  0001 C CNN
+	1    3950 1800
+	1    0    0    -1  
+$EndComp
+Connection ~ 3950 1800
+Wire Wire Line
+	3950 1800 4150 1800
+Wire Wire Line
+	4750 1500 4750 1400
+Wire Wire Line
+	4750 1400 5000 1400
+$Comp
+L power:GND #PWR?
+U 1 1 5CA820F3
+P 4750 1800
+F 0 "#PWR?" H 4750 1550 50  0001 C CNN
+F 1 "GND" H 4755 1627 50  0000 C CNN
+F 2 "" H 4750 1800 50  0001 C CNN
+F 3 "" H 4750 1800 50  0001 C CNN
+	1    4750 1800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4750 1700 4750 1800
+Text Label 5000 1400 2    50   ~ 0
+VDD
+Wire Wire Line
+	6100 2450 6100 2300
+Wire Wire Line
+	6100 2300 5900 2300
+Wire Wire Line
+	5900 2300 5900 2450
+Text Label 5900 2300 0    50   ~ 0
+VDD
+Wire Wire Line
+	5400 2950 4850 2950
+Wire Wire Line
+	5400 2750 4850 2750
+Wire Wire Line
+	4850 2750 4850 2950
+Text Label 4900 2750 0    50   ~ 0
+V_REG_IN
+Text Label 4900 2950 0    50   ~ 0
+V_BUS
+Text Label 4900 3250 0    50   ~ 0
+USB_D_-
+Text Label 4900 3350 0    50   ~ 0
+USB_D_+
+Text Label 4900 3550 0    50   ~ 0
+TX_LED_AL
+Text Label 4900 3650 0    50   ~ 0
+RX_LED_AL
+Wire Wire Line
+	4900 3250 5400 3250
+Wire Wire Line
+	4900 3350 5400 3350
+Wire Wire Line
+	4900 3550 5400 3550
+Wire Wire Line
+	4900 3650 5400 3650
+Wire Wire Line
+	4900 3750 5400 3750
+Wire Wire Line
+	5400 3850 4900 3850
+Text Label 4900 3750 0    50   ~ 0
+GPIO_2
+Text Label 4900 3850 0    50   ~ 0
+GPIO_3
+$Comp
+L Device:C_Small C?
+U 1 1 5CA82E9E
+P 4950 4250
+F 0 "C?" H 5042 4296 50  0000 L CNN
+F 1 "10uF" H 5042 4205 50  0000 L CNN
+F 2 "" H 4950 4250 50  0001 C CNN
+F 3 "~" H 4950 4250 50  0001 C CNN
+	1    4950 4250
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	5400 4050 4950 4050
+Wire Wire Line
+	4950 4050 4950 4150
+$Comp
+L power:GND #PWR?
+U 1 1 5CA830E3
+P 4950 4450
+F 0 "#PWR?" H 4950 4200 50  0001 C CNN
+F 1 "GND" H 4955 4277 50  0000 C CNN
+F 2 "" H 4950 4450 50  0001 C CNN
+F 3 "" H 4950 4450 50  0001 C CNN
+	1    4950 4450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4950 4350 4950 4400
+Wire Wire Line
+	6200 4350 6200 4400
+Wire Wire Line
+	6200 4400 6100 4400
+Connection ~ 4950 4400
+Wire Wire Line
+	4950 4400 4950 4450
+Wire Wire Line
+	6100 4350 6100 4400
+Connection ~ 6100 4400
+Wire Wire Line
+	6100 4400 4950 4400
+Text GLabel 7000 3550 2    50   Input ~ 0
+DEB_RTS
+Text GLabel 7000 3650 2    50   Input ~ 0
+DEB_CTS
+Text GLabel 7000 3350 2    50   Input ~ 0
+DEB_TX
+Text GLabel 7000 3250 2    50   Input ~ 0
+DEB_RX
+Wire Wire Line
+	6800 3250 7000 3250
+Wire Wire Line
+	6800 3350 7000 3350
+Wire Wire Line
+	6800 3550 7000 3550
+Wire Wire Line
+	6800 3650 7000 3650
+$Comp
+L Device:R_Small R?
+U 1 1 5CA846D9
+P 7550 3700
+F 0 "R?" H 7609 3746 50  0000 L CNN
+F 1 "4.7k" H 7609 3655 50  0000 L CNN
+F 2 "" H 7550 3700 50  0001 C CNN
+F 3 "~" H 7550 3700 50  0001 C CNN
+	1    7550 3700
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6800 3850 7550 3850
+Wire Wire Line
+	7550 3850 7550 3800
+Wire Wire Line
+	7550 3600 7550 2300
+Wire Wire Line
+	7550 2300 6100 2300
+Connection ~ 6100 2300
+$Comp
+L Connector:USB_B J?
+U 1 1 5CA85574
+P 2150 3000
+F 0 "J?" H 2205 3467 50  0000 C CNN
+F 1 "USB_B" H 2205 3376 50  0000 C CNN
+F 2 "" H 2300 2950 50  0001 C CNN
+F 3 " ~" H 2300 2950 50  0001 C CNN
+	1    2150 3000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2450 2800 3150 2800
+Wire Wire Line
+	2450 3000 3150 3000
+Wire Wire Line
+	2450 3100 3150 3100
+Wire Wire Line
+	2050 3400 2050 3500
+Wire Wire Line
+	2050 3500 2100 3500
+Wire Wire Line
+	2150 3500 2150 3400
+$Comp
+L power:GND #PWR?
+U 1 1 5CA86DAE
+P 2100 3500
+F 0 "#PWR?" H 2100 3250 50  0001 C CNN
+F 1 "GND" H 2105 3327 50  0000 C CNN
+F 2 "" H 2100 3500 50  0001 C CNN
+F 3 "" H 2100 3500 50  0001 C CNN
+	1    2100 3500
+	1    0    0    -1  
+$EndComp
+Connection ~ 2100 3500
+Wire Wire Line
+	2100 3500 2150 3500
+Text Label 3150 3000 2    50   ~ 0
+USB_D_+
+Text Label 3150 3100 2    50   ~ 0
+USB_D_-
+Text Label 3050 2800 2    50   ~ 0
+V_BUS
+$Comp
+L Power_Protection:TPD2EUSB30 U?
+U 1 1 5CA86ED8
+P 2400 4350
+F 0 "U?" H 2400 4717 50  0000 C CNN
+F 1 "TPD2EUSB30" H 2400 4626 50  0000 C CNN
+F 2 "Package_TO_SOT_SMD:Texas_DRT-3" H 1650 4050 50  0001 C CNN
+F 3 "http://www.ti.com/lit/ds/symlink/tpd2eusb30a.pdf" H 2400 4350 50  0001 C CNN
+	1    2400 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 4350 1650 4350
+Text Label 1650 4350 0    50   ~ 0
+USB_D_+
+Text Label 3150 4350 2    50   ~ 0
+USB_D_-
+Wire Wire Line
+	2800 4350 3150 4350
+$Comp
+L power:GND #PWR?
+U 1 1 5CA894CF
+P 2400 4850
+F 0 "#PWR?" H 2400 4600 50  0001 C CNN
+F 1 "GND" H 2405 4677 50  0000 C CNN
+F 2 "" H 2400 4850 50  0001 C CNN
+F 3 "" H 2400 4850 50  0001 C CNN
+	1    2400 4850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2400 4750 2400 4850
+Text GLabel 3150 2800 2    50   Input ~ 0
+PR_5V_IN
+$EndSCHEMATC

@@ -1,0 +1,385 @@
+EESchema Schematic File Version 4
+LIBS:Senior_Project_Rev_1_5-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 2 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Interface_USB:CP2104 U1
+U 1 1 5CA82A78
+P 5600 3600
+F 0 "U1" H 5050 4450 50  0000 C CNN
+F 1 "CP2104" H 6050 2650 50  0000 C CNN
+F 2 "Housings_DFN_QFN:QFN-24-1EP_4x4mm_Pitch0.5mm" H 5750 2650 50  0001 L CNN
+F 3 "https://www.silabs.com/Support%20Documents/TechnicalDocs/cp2104.pdf" H 5050 4850 50  0001 C CNN
+	1    5600 3600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Power_Protection:SP0503BAHT D1
+U 1 1 5CA82C0D
+P 2300 4600
+F 0 "D1" H 2505 4646 50  0000 L CNN
+F 1 "SP0503BAHT" H 2505 4555 50  0000 L CNN
+F 2 "TO_SOT_Packages_SMD:SOT-143" H 2525 4550 50  0001 L CNN
+F 3 "http://www.littelfuse.com/~/media/files/littelfuse/technical%20resources/documents/data%20sheets/sp05xxba.pdf" H 2425 4725 50  0001 C CNN
+	1    2300 4600
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1950 4350 2300 4350
+Wire Wire Line
+	2300 4350 2300 4400
+Wire Wire Line
+	1950 4250 2200 4250
+Wire Wire Line
+	2200 4250 2200 4400
+Wire Wire Line
+	1950 4050 2400 4050
+Wire Wire Line
+	2400 4050 2400 4400
+Wire Wire Line
+	1550 4650 1550 4900
+Wire Wire Line
+	1550 4900 1650 4900
+Wire Wire Line
+	2300 4900 2300 4800
+Wire Wire Line
+	1650 4650 1650 4900
+Connection ~ 1650 4900
+Wire Wire Line
+	1650 4900 1950 4900
+Wire Wire Line
+	2200 4250 2700 4250
+Connection ~ 2200 4250
+Wire Wire Line
+	2300 4350 2700 4350
+Connection ~ 2300 4350
+Wire Wire Line
+	2400 4050 2700 4050
+Connection ~ 2400 4050
+Text Label 2700 4050 2    50   ~ 0
+V_USB_BUS
+Text Label 2700 4250 2    50   ~ 0
+USB_D+
+Text Label 2700 4350 2    50   ~ 0
+USB_D-
+$Comp
+L power:GND #PWR0101
+U 1 1 5CA8300D
+P 1950 4900
+F 0 "#PWR0101" H 1950 4650 50  0001 C CNN
+F 1 "GND" H 1955 4727 50  0000 C CNN
+F 2 "" H 1950 4900 50  0001 C CNN
+F 3 "" H 1950 4900 50  0001 C CNN
+	1    1950 4900
+	1    0    0    -1  
+$EndComp
+Connection ~ 1950 4900
+Wire Wire Line
+	1950 4900 2300 4900
+$Comp
+L Device:C_Small C1
+U 1 1 5CA830E9
+P 1550 1850
+F 0 "C1" H 1642 1896 50  0000 L CNN
+F 1 ".1uF" H 1642 1805 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1550 1850 50  0001 C CNN
+F 3 "~" H 1550 1850 50  0001 C CNN
+	1    1550 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 5CA83137
+P 1900 1850
+F 0 "C2" H 1992 1896 50  0000 L CNN
+F 1 "10uF" H 1992 1805 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 1900 1850 50  0001 C CNN
+F 3 "~" H 1900 1850 50  0001 C CNN
+	1    1900 1850
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:C_Small C3
+U 1 1 5CA8316F
+P 2550 1850
+F 0 "C3" H 2642 1896 50  0000 L CNN
+F 1 "10uF" H 2642 1805 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 2550 1850 50  0001 C CNN
+F 3 "~" H 2550 1850 50  0001 C CNN
+	1    2550 1850
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	1550 1750 1550 1650
+Wire Wire Line
+	1550 1650 1900 1650
+Wire Wire Line
+	1900 1650 1900 1750
+Wire Wire Line
+	1550 1950 1550 2050
+Wire Wire Line
+	1550 2050 1900 2050
+Wire Wire Line
+	1900 2050 1900 1950
+Wire Wire Line
+	2550 1750 2550 1650
+Wire Wire Line
+	2550 1650 2400 1650
+$Comp
+L power:GND #PWR0102
+U 1 1 5CA8375D
+P 1550 2050
+F 0 "#PWR0102" H 1550 1800 50  0001 C CNN
+F 1 "GND" H 1555 1877 50  0000 C CNN
+F 2 "" H 1550 2050 50  0001 C CNN
+F 3 "" H 1550 2050 50  0001 C CNN
+	1    1550 2050
+	1    0    0    -1  
+$EndComp
+Connection ~ 1550 2050
+$Comp
+L power:GND #PWR0103
+U 1 1 5CA8378B
+P 2550 2050
+F 0 "#PWR0103" H 2550 1800 50  0001 C CNN
+F 1 "GND" H 2555 1877 50  0000 C CNN
+F 2 "" H 2550 2050 50  0001 C CNN
+F 3 "" H 2550 2050 50  0001 C CNN
+	1    2550 2050
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	2550 1950 2550 2050
+Text Label 2400 1650 0    50   ~ 0
+VDD
+Text Label 1550 1650 0    50   ~ 0
+V_REGIN
+Wire Wire Line
+	4900 3000 4550 3000
+Wire Wire Line
+	4550 3000 4550 3200
+Wire Wire Line
+	4550 3200 4900 3200
+Wire Wire Line
+	4550 3200 4200 3200
+Connection ~ 4550 3200
+Text Label 4200 3200 0    50   ~ 0
+V_USB_BUS
+Text Label 4550 3000 0    50   ~ 0
+V_REGIN
+Wire Wire Line
+	5600 2700 5600 2500
+Wire Wire Line
+	5600 2500 5400 2500
+Wire Wire Line
+	5400 2700 5400 2500
+Connection ~ 5400 2500
+Wire Wire Line
+	5400 2500 4250 2500
+Text Label 4250 2500 0    50   ~ 0
+VDD
+Wire Wire Line
+	4900 3500 4200 3500
+Wire Wire Line
+	4900 3600 4200 3600
+Text Label 4200 3600 0    50   ~ 0
+USB_D+
+Text Label 4200 3500 0    50   ~ 0
+USB_D-
+Wire Wire Line
+	4900 3800 4200 3800
+Wire Wire Line
+	4900 3900 4200 3900
+Wire Wire Line
+	4900 4000 4200 4000
+Wire Wire Line
+	4900 4100 4200 4100
+Text Label 4200 3800 0    50   ~ 0
+TX_LED_AL
+Text Label 4200 3900 0    50   ~ 0
+RX_LED_AL
+Text Label 4200 4000 0    50   ~ 0
+CP_GPIO_2
+Text Label 4200 4100 0    50   ~ 0
+CP_GPIO_3
+$Comp
+L Device:C_Small C4
+U 1 1 5CA86408
+P 4450 4450
+F 0 "C4" H 4542 4496 50  0000 L CNN
+F 1 "10uF" H 4542 4405 50  0000 L CNN
+F 2 "Capacitors_SMD:C_0805" H 4450 4450 50  0001 C CNN
+F 3 "~" H 4450 4450 50  0001 C CNN
+	1    4450 4450
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR0104
+U 1 1 5CA8644D
+P 4450 4750
+F 0 "#PWR0104" H 4450 4500 50  0001 C CNN
+F 1 "GND" H 4455 4577 50  0000 C CNN
+F 2 "" H 4450 4750 50  0001 C CNN
+F 3 "" H 4450 4750 50  0001 C CNN
+	1    4450 4750
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4450 4350 4450 4300
+Wire Wire Line
+	4450 4300 4900 4300
+Wire Wire Line
+	5700 4600 5700 4700
+Wire Wire Line
+	5700 4700 5600 4700
+Wire Wire Line
+	4450 4700 4450 4550
+Wire Wire Line
+	5600 4600 5600 4700
+Connection ~ 5600 4700
+Wire Wire Line
+	5600 4700 4450 4700
+Wire Wire Line
+	4450 4750 4450 4700
+Connection ~ 4450 4700
+$Comp
+L Device:R_Small R1
+U 1 1 5CA87F92
+P 7500 4000
+F 0 "R1" H 7559 4046 50  0000 L CNN
+F 1 "10k" H 7559 3955 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 7500 4000 50  0001 C CNN
+F 3 "~" H 7500 4000 50  0001 C CNN
+	1    7500 4000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 3900 7000 3900
+Wire Wire Line
+	6300 3800 7000 3800
+Wire Wire Line
+	6300 3600 7000 3600
+Wire Wire Line
+	6300 3500 7000 3500
+Text GLabel 7000 3900 2    50   Input ~ 0
+DEB_RTS
+Text GLabel 7000 3800 2    50   Input ~ 0
+DEB_CTS
+Text GLabel 7000 3600 2    50   Input ~ 0
+DEB_TX
+Text GLabel 7000 3500 2    50   Input ~ 0
+DEB_RX
+Wire Wire Line
+	6300 4100 7500 4100
+Wire Wire Line
+	7500 3900 7500 2500
+Wire Wire Line
+	7500 2500 5600 2500
+Connection ~ 5600 2500
+$Comp
+L Device:R_Small R2
+U 1 1 5CA8C034
+P 8800 3950
+F 0 "R2" H 8859 3996 50  0000 L CNN
+F 1 "1k" H 8859 3905 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 8800 3950 50  0001 C CNN
+F 3 "~" H 8800 3950 50  0001 C CNN
+	1    8800 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:R_Small R3
+U 1 1 5CA8C0A4
+P 9400 3950
+F 0 "R3" H 9459 3996 50  0000 L CNN
+F 1 "1k" H 9459 3905 50  0000 L CNN
+F 2 "Resistors_SMD:R_0805" H 9400 3950 50  0001 C CNN
+F 3 "~" H 9400 3950 50  0001 C CNN
+	1    9400 3950
+	1    0    0    -1  
+$EndComp
+$Comp
+L Device:LED D2
+U 1 1 5CA8C159
+P 8800 4350
+F 0 "D2" V 8838 4233 50  0000 R CNN
+F 1 "TX_LED" V 8747 4233 50  0000 R CNN
+F 2 "LEDs:LED_1206" H 8800 4350 50  0001 C CNN
+F 3 "~" H 8800 4350 50  0001 C CNN
+	1    8800 4350
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Device:LED D3
+U 1 1 5CA8C1DD
+P 9400 4350
+F 0 "D3" V 9438 4232 50  0000 R CNN
+F 1 "RX_LED" V 9347 4232 50  0000 R CNN
+F 2 "LEDs:LED_1206" H 9400 4350 50  0001 C CNN
+F 3 "~" H 9400 4350 50  0001 C CNN
+	1    9400 4350
+	0    -1   -1   0   
+$EndComp
+Wire Wire Line
+	9400 3850 9400 3700
+Wire Wire Line
+	9400 3700 8800 3700
+Wire Wire Line
+	8800 3850 8800 3700
+Connection ~ 8800 3700
+Wire Wire Line
+	8800 3700 8650 3700
+Text Label 8650 3700 0    50   ~ 0
+VDD
+Wire Wire Line
+	8800 4050 8800 4200
+Wire Wire Line
+	9400 4050 9400 4200
+Wire Wire Line
+	8800 4500 8800 4600
+Wire Wire Line
+	9400 4500 9400 4700
+Text Label 8400 4600 0    50   ~ 0
+TX_LED_AL
+Text Label 8400 4700 0    50   ~ 0
+RX_LED_AL
+Wire Wire Line
+	8400 4600 8800 4600
+Wire Wire Line
+	8400 4700 9400 4700
+Wire Wire Line
+	1500 800  2500 800 
+Wire Wire Line
+	1500 950  2500 950 
+Text GLabel 2500 800  2    50   Input ~ 0
+V_USB_BUS
+Text GLabel 2500 950  2    50   Input ~ 0
+PR_CP_3V3
+Text Label 1500 950  0    50   ~ 0
+VDD
+Text Label 1500 800  0    50   ~ 0
+V_USB_BUS
+$Comp
+L Connector:USB_B_Mini J1
+U 1 1 5CAC856A
+P 1650 4250
+F 0 "J1" H 1705 4717 50  0000 C CNN
+F 1 "USB_B_Mini" H 1705 4626 50  0000 C CNN
+F 2 "custom:USB_B_Mini_Molex" H 1800 4200 50  0001 C CNN
+F 3 "~" H 1800 4200 50  0001 C CNN
+	1    1650 4250
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,67 @@
+EESchema Schematic File Version 4
+LIBS:Senior_Project_Rev_1_5-cache
+EELAYER 26 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 8
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Sheet
+S 8700 850  1850 1200
+U 5CA82A28
+F0 "USB_SERIAL" 50
+F1 "CP2104.sch" 50
+$EndSheet
+$Sheet
+S 8700 2350 1850 1250
+U 5CA97B79
+F0 "CHARG CNTR" 50
+F1 "MCP73871.sch" 50
+$EndSheet
+$Sheet
+S 8700 3850 1850 1200
+U 5CAA4D36
+F0 "BUCK/BOOST" 50
+F1 "TPS63070.sch" 50
+$EndSheet
+$Sheet
+S 6750 850  1750 1200
+U 5CABFDCF
+F0 "BATT FUEL GAUGE" 50
+F1 "BQ27441.sch" 50
+$EndSheet
+$Sheet
+S 6750 2350 1800 1250
+U 5CAC0FA8
+F0 "IMU" 50
+F1 "BNO055.sch" 50
+$EndSheet
+$Sheet
+S 6800 3850 1750 1200
+U 5CACE136
+F0 "GPS" 50
+F1 "MTK3339.sch" 50
+$EndSheet
+$Sheet
+S 7850 5250 1650 1050
+U 5CAD14FB
+F0 "PIC32" 50
+F1 "PIC32MX170F256B.sch" 50
+$EndSheet
+Wire Notes Line
+	6600 500  6600 6500
+Wire Notes Line
+	6600 6500 11200 6500
+Wire Notes Line
+	11200 6500 11200 500 
+Wire Notes Line
+	11200 500  6600 500 
+$EndSCHEMATC
